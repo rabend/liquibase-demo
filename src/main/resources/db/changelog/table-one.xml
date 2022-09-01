@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd">
+    <changeSet id="table-one" author="roman.abendroth@rewe-digital.com">
+        <createTable tableName="table_one">
+            <column name="id" type="varchar(36)" />
+            <column name="title" type="text" />
+            <column name="version" type="int" />
+        </createTable>
+        <addForeignKeyConstraint baseTableName="table_one" baseColumnNames="id" constraintName="fk_one_two"
+                                 referencedTableName="table_two"
+                                 referencedColumnNames="id" />
+    </changeSet>
+
+</databaseChangeLog>

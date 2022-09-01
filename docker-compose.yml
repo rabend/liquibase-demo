@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  postgres:
+    image: postgres
+    ports:
+      - '5431:5432'
+    environment:
+      - POSTGRES_USER=demo
+      - POSTGRES_PASSWORD=demo
+      - POSTGRES_DB=demo
